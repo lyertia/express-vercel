@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const product = require("./api/product");
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.json({ extended: false }));
 
