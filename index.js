@@ -9,7 +9,7 @@ app.use(express.json({ extended: false }));
 
 app.use("/api/product", product);
 app.get("/", async (req, res) => {
-  res.render("hello.ejs")
+  res.render("hello.ejs", { title: "Home" });
 });
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
